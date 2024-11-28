@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Calcul de la TM</title>
+		<meta name="Author" content="Alexandre Venet">
+		<meta name="description" content="Calculateur en ligne et gratuit des températures de fusion et nombres AT et CG.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/fontes.css">
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+
+		<header>
+			<div class="conteneur">
+				<h1>Calcul de la TM</h1>
+				<p>2(A+T)+4(C+G)</p>
+			</div>
+		</header>
+
+		<main>
+			<section class="ligneForm rien">
+				<form>
+					<input type="text" id="sequence" name="sequence" value="" placeholder="Entrez ici 17 à 25 ATCG">
+				</form>
+			</section>
+			<section class="conteneur resultats">
+				<ul class="liste">
+					<li>
+						<ul>
+							<li>TM</li>
+							<li id="liTM" class="enGrasBleu">-</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>Longueur en bases</li>
+							<li id="liLongueurBases">-</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>A+T</li>
+							<li id="liAT">-</li>
+						</ul>
+					</li>
+					<li>
+						<ul>
+							<li>C+G</li>
+							<li id="liCG">-</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</main>
+
+		<footer>
+			<div class="conteneur">
+				<p>Wallace, R.B., et al. (1979) Nucleic Acids Res. 6: 3545.</p>
+				<p>Conception & réalisation : Alexandre VENET</p>
+			</div>
+		</footer>
+
+		<script src="js/script.js"></script>
+	</body>
+</html>
