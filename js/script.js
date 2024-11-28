@@ -10,10 +10,10 @@ const fondChangerCouleur = (cible, couleur) => {
 }
 
 const reinitChamps = (liAT, liCG, liLongueurBases, liTM) => {
-	liAT.innerHTML = '-';
-	liCG.innerHTML = '-';
-	liLongueurBases.innerHTML = '-';
-	liTM.innerHTML = '-';
+	liAT.textContent = '-';
+	liCG.textContent = '-';
+	liLongueurBases.textContent = '-';
+	liTM.textContent = '-';
 }
 
 const nombreLettre = (chaine,lettreCherchee) => {
@@ -53,17 +53,17 @@ function testerChamp(){
 				let nbreT = nombreLettre(valeurSansEspaces,'T');
 				let nbreC = nombreLettre(valeurSansEspaces,'C');
 				let nbreG = nombreLettre(valeurSansEspaces,'G');
-				console.log(nbreA, nbreT, nbreC, nbreG);
+				// console.log(nbreA, nbreT, nbreC, nbreG);
 				const nbreAT = nbreA + nbreT;
 				const nbreCG = nbreC + nbreG;
 				const longueur = nbreAT + nbreCG;
 				const pourcentAT = Math.round( (nbreAT / longueur * 100) );
 				const pourcentCG = Math.round( (nbreCG / longueur * 100) );
 				const valeurTM = (2 * nbreAT) + (4 * nbreCG);
-				liAT.innerHTML = `${nbreAT} (${pourcentAT}%)`;
-				liCG.innerHTML = `${nbreCG} (${pourcentCG}%)`;
-				liTM.innerHTML = valeurTM + '°C';
-				liLongueurBases.innerHTML = longueur;
+				liAT.textContent = `${nbreAT} (${pourcentAT}%)`;
+				liCG.textContent = `${nbreCG} (${pourcentCG}%)`;
+				liTM.textContent = valeurTM + '°C';
+				liLongueurBases.textContent = longueur;
 			//}else{
 			//	fondChangerCouleur(fond, 'rien');
 			//	reinitChamps(liAT, liCG, liLongueurBases, liTM);
@@ -84,11 +84,10 @@ function testerChamp(){
 	}
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener('DOMContentLoaded', () => 
+{
 	const champ = document.querySelector('input');
 	champ.addEventListener('input', testerChamp);
 	champ.value = null;
 	valeurInit = champ.value;
-
 });
